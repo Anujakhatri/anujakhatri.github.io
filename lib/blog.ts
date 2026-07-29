@@ -1,28 +1,3 @@
-// Blog content source.
-//
-// Content strategy: typed blocks, not MDX.
-//   The rest of this project (lib/site.ts) keeps its content as typed
-//   TypeScript arrays — that's the established pattern. Adding @next/mdx
-//   (and the remark/rehype ecosystem to make it pretty) is real new
-//   architecture for a "posts in data" feature, while a typed block
-//   structure keeps content in one file with full type safety, zero new
-//   deps, and full static-export compatibility.
-//
-//   If/when you outgrow blocks, swap `body` for an MDX pipeline:
-//     1. `pnpm add @next/mdx gray-matter remark-gfm`
-//     2. Add an mdx-components.tsx at the project root with the same
-//        element overrides used in components/blog-renderer.tsx (so MDX
-//        elements render identically).
-//     3. Change `body` from PostBlock[] to `content: string` containing
-//        compiled MDX and render it via the MDX provider.
-//   The block renderer you'll use for an MDX swap is the same shape
-//   (h2/h3/p/pre/ul/code) — the swap is local, not architectural.
-//
-// To add a new post:
-//   1. Append an entry to POSTS below.
-//   2. Slug must be unique, lowercase, hyphenated.
-//   3. Body is an array of typed blocks; keep the prose honest.
-
 export interface PostBlock {
   type: "paragraph" | "heading" | "code" | "list";
   text?: string;
@@ -55,7 +30,7 @@ export const POSTS: BlogPost[] = [
     body: [
       {
         type: "paragraph",
-        text: "This is a stub entry so the blog listing and route have something to render. Replace it (or add new entries above this one) when you're ready to publish.",
+        text: "This is a stub entry so the blog listing and route have something to render. Will update this soon.",
       },
       {
         type: "heading",
