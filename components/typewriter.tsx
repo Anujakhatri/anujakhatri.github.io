@@ -67,19 +67,30 @@ export function TypewriterText({
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion) {
-      setRendered(phrases[0] ?? "");
-      setPhase("pausing");
-      return;
+      const timer = window.setTimeout(() => {
+        if (!cancelled.current) {
+          setRendered(phrases[0] ?? "");
+          setPhase("pausing");
+        }
+      }, 0);
+      return () => {
+        cancelled.current = true;
+        window.clearTimeout(timer);
+      };
     }
-
-    // Rewind and start typing from phrase 0.
-    setRendered("");
-    setPhase("typing");
 
     let phraseIdx = 0;
     let charIdx = 0;
     let currentPhase: Phase = "typing";
     let timer: number | undefined;
+
+    // Rewind and start typing from phrase 0.
+    timer = window.setTimeout(() => {
+      if (cancelled.current) return;
+      setRendered("");
+      setPhase("typing");
+      timer = window.setTimeout(tick, typeSpeed);
+    }, 0);
 
     const tick = () => {
       if (cancelled.current) return;
@@ -120,7 +131,7 @@ export function TypewriterText({
       }
     };
 
-    timer = window.setTimeout(tick, typeSpeed);
+    // Initial tick is now scheduled inside the rewind timeout above
 
     return () => {
       cancelled.current = true;

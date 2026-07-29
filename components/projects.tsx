@@ -6,7 +6,6 @@ import { AnimatedSection } from "./animated-section";
 import { SeeMoreButton } from "./see-more-button";
 import { cn } from "./primitives";
 import {
-  ChevronDownIcon,
   ChevronRightIcon,
   ExternalIcon,
   GitHubIcon,
