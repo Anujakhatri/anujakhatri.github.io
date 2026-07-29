@@ -1,19 +1,19 @@
 # Portfolio | Anuja Khatri 🚀
 
-Welcome to my personal portfolio repository! I am a **Full-Stack Developer** and **ML Enthusiast** passionate about building scalable web applications and exploring the potential of Artificial Intelligence.
+Welcome to my personal portfolio repository! I am a **Full Stack Developer** specializing in building production-grade REST APIs, role-based access control (RBAC) systems, and data processing pipelines using Python, Django, FastAPI, Node.js, and modern frontend technologies.
 
 ---
 
-## 🛠️ Tech Stack
-Here’s a breakdown of the technologies I work with :
+## 🛠️ Tech Stack & Ecosystem
+
+Here’s a breakdown of the technologies I work with:
 
 ### **Frontend**
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007acc.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 ---
 
@@ -31,12 +31,12 @@ Connect with me to discuss projects, collaborations, or just to say hi!
 
 ## ⚙️ Local Development
 
-To run this portfolio locally, follow these steps:
+To run this portfolio site locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone [_REPOSITORY_URL]
-   cd repo_name
+   git clone https://github.com/Anujakhatri/anujakhatri.github.io.git
+   cd anujakhatri.github.io
    ```
 
 2. **Install dependencies**:
@@ -49,11 +49,19 @@ To run this portfolio locally, follow these steps:
    npm run dev
    ```
 
-4. **Build for production**:
+4. **Build the static export**:
    ```bash
    npm run build
    ```
+   The static build files will output in the `./out` directory.
 
 ---
 
+## 🔒 Connect with Me
+
+- **Email**: [khatrianuja20@gmail.com](mailto:khatrianuja20@gmail.com)
+- **LinkedIn**: [Anuja Khatri](https://linkedin.com/in/anuja-khatri)
+- **GitHub**: [@Anujakhatri](https://github.com/Anujakhatri)
+
+---
 Designed with ❤️ by **Anuja Khatri**
